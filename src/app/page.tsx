@@ -1,12 +1,14 @@
 'use client'
 import React, { useState } from 'react';
+import Image from 'next/image';
+
 
 
 
 const products = [
   { id: 1, name: 'Elegant Handbag', price: 120, description: 'A stylish handbag made from premium leather, featuring a spacious interior, multiple pockets, and a detachable shoulder strap. Perfect for any occasion.', image: '/360_F_110045173_QgmA3gg5OwTlLNQBqmPdFnkh6sPvsvt8.jpg' },
   { id: 2, name: 'Casual Backpack', price: 80, description: 'A spacious and comfortable backpack...', image: '/61Rlx3Fkv8L._AC_UY1000_.jpg' },
-  { id: 3, name: 'Modern Sunglasses', price: 50, description: 'Stylish sunglasses...', image: '/annie-williams-FlP6C5pkMKs-unsplash.jpg' },
+  { id: 3, name: 'Modern Sunglasses', price: 50, description: 'Stylish sunglasses good for sunny days', image: '/annie-williams-FlP6C5pkMKs-unsplash.jpg' },
   { id: 4, name: 'Luxe Leather Wallet', price: 45, description: 'Compact and durable wallet, crafted with premium leather', image: '/01-500x500.jpg' },
   { id: 5, name: 'Crystal Bracelet', price: 60, description: 'A beautiful bracelet adorned with sparkling crystals. Perfect for special occasions', image: '/carlos-esteves-1MWbwTaeJIA-unsplash (1).jpg' },
   { id: 6, name: 'Silk Scarf', price: 40, description: 'An elegant silk scarf, perfect for elevating any outfit.', image: '/silk-square-scarves_842983-14579.jpg' },
@@ -42,7 +44,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Header */}
       <header className="flex justify-between items-center p-4 bg-gray-800">
-        <h1 className="text-xl font-bold">Yemna's Fusion Mart</h1>
+        <h1 className="text-xl font-bold">Yemna&apos;s Fusion Mart</h1>
         <nav>
           <a href="#home" className="px-4 hover:text-gray-300">Home</a>
           <a href="#shop" className="px-4 hover:text-gray-300">Shop</a>
@@ -67,7 +69,7 @@ export default function Home() {
 
           {/* Overlay content */}
            <div className="relative z-10 flex flex-col justify-center items-center h-full text-center text-white bg-black bg-opacity-50">
-           <h2 className="text-3xl font-bold">Welcome to Yemna's Fusion Mart</h2>
+           <h2 className="text-3xl font-bold">Welcome to Yemna&apos;s  Fusion Mart</h2>
            <p className="mt-4 text-lg">Discover stylish fashion and accessories at unbeatable prices!</p>
         </div>
       </section>
@@ -77,7 +79,7 @@ export default function Home() {
       <section id="about" className="p-8 bg-gray-800">
         <h2 className="text-2xl font-bold mb-4">About Us</h2>
         <p className="text-gray-300">
-          Yemna's Fusion Mart is dedicated to bringing you high-quality fashion and accessories at affordable prices.
+          Yemna&apos;s  Fusion Mart is dedicated to bringing you high-quality fashion and accessories at affordable prices.
         </p>
       </section>
 
@@ -95,7 +97,7 @@ export default function Home() {
               onMouseLeave={() => setHoveredProduct(null)}
               onClick={() => setSelectedProduct(product)}
             >
-              <img src={product.image} alt={product.name} className="w-full h-48 object-cover rounded-md mb-4" />
+              <Image src={product.image} alt={product.name} width={500} height={300}  className="w-full h-48 object-cover rounded-md mb-4" />
               <h3 className="text-lg font-semibold">{product.name}</h3>
               <p className="text-gray-300">{product.description}</p>
               <p className="font-bold mt-2">${product.price}</p>
@@ -139,7 +141,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-gray-800 p-4 text-center">
-        <p className="text-gray-300">© 2024 Yemna's Fusion Mart. All rights reserved.</p>
+        <p className="text-gray-300">© 2024 Yemna&apos;s Fusion Mart. All rights reserved.</p>
       </footer>
     </div>
   );
